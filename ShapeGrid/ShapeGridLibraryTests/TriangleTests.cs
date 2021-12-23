@@ -17,9 +17,9 @@ namespace ShapeGridLibraryTests
             int[][] vertexCoordinates = { vertex1, vertex2, vertex3 };
             Triangle triangle = new Triangle(10, 10);
 
-            string actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
+            string[] actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, string.Join("", actual));
         }
 
         [TestMethod]
@@ -33,9 +33,9 @@ namespace ShapeGridLibraryTests
             int[][] vertexCoordinates = { vertex1, vertex2, vertex3 };
             Triangle triangle = new Triangle(10, 10);
 
-            string actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
+            string[] actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, string.Join("", actual));
         }
 
         [TestMethod]
@@ -49,9 +49,9 @@ namespace ShapeGridLibraryTests
             int[][] vertexCoordinates = { vertex1, vertex2, vertex3 };
             Triangle triangle = new Triangle(10, 10);
 
-            string actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
+            string[] actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, string.Join("", actual));
         }
 
         [TestMethod]
@@ -65,9 +65,9 @@ namespace ShapeGridLibraryTests
             int[][] vertexCoordinates = { vertex1, vertex2, vertex3 };
             Triangle triangle = new Triangle(10, 10);
 
-            string actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
+            string[] actual = triangle.GetLocationFromCoordinates(vertexCoordinates);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, string.Join("", actual));
         }
 
         [TestMethod]
@@ -76,8 +76,8 @@ namespace ShapeGridLibraryTests
             int[] vertex1 = { 60, 40 };
             int[] vertex2 = { 50, 40 };
             int[] vertex3 = { 60, 50 };
-            int[][] expected = new int[][] { vertex1 , vertex2, vertex3};
-            
+            int[][] expected = new int[][] { vertex1, vertex2, vertex3 };
+
 
             Triangle triangle = new Triangle(10, 10);
             //location E12
@@ -85,7 +85,7 @@ namespace ShapeGridLibraryTests
 
             Assert.AreEqual(expected.Length, actual.Length);
 
-            for (int vertex = 0; vertex < actual.Length; vertex++ )
+            for (int vertex = 0; vertex < actual.Length; vertex++)
             {
                 Assert.AreEqual(expected[vertex][0], actual[vertex][0]);
                 Assert.AreEqual(expected[vertex][1], actual[vertex][1]);
