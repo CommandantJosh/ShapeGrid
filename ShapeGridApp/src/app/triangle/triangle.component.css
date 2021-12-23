@@ -1,0 +1,17 @@
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+  }
+  .inputGroup{
+      padding-bottom: 10px;
+  }
+  .input{
+      border-radius: 5px;
+      border: 2px solid darkgrey;
+  }
+  button{
+    border-radius: 5px;
+    padding: 5px;
+
+  }

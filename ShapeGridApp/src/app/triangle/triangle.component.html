@@ -1,0 +1,32 @@
+<p>Triangle Details</p>
+<div class ="inputGroup">
+    <label for="height">Height: </label>
+    <input type="number" class="input" id="height" [(ngModel)]="triangle.height" placeholder="10">
+</div>
+<div class ="inputGroup">
+    <label for="width">Width: </label>
+    <input type="number" class="input" id="width" [(ngModel)]="triangle.width" placeholder="10">
+</div>
+
+<p>Coordinates</p>
+<div class ="inputGroup">
+    <label for="vertex1x">Vetex 1 x: </label><input type="number" class="input" id="vertex1x" [(ngModel)]="triangle.vertex1x"><label  for="vertex1y">Vetex 1 y: </label><input type="number" class="input" id="vertex1y" [(ngModel)]="triangle.vertex1y">
+</div>
+<div class ="inputGroup">
+    <label for="vertex1x">Vetex 2 x: </label><input type="number" class="input" id="vertex2x" [(ngModel)]="triangle.vertex2x"><label for="vertex2y">Vetex 2 y: </label><input type="number" class="input" id="vertex2y" [(ngModel)]="triangle.vertex2y">
+</div>
+<div class ="inputGroup">
+    <label for="vertex1x">Vetex 3 x: </label><input type="number" class="input" id="vertex3x" [(ngModel)]="triangle.vertex3x"><label for="vertex3y">Vetex 3 y: </label><input type="number" class="input" id="vertex3y" [(ngModel)]="triangle.vertex3y">
+</div>
+<button (click)="GetTriangleCoordinates()">Get Coordinates from Location</button>
+
+<p>Location</p>
+<div class ="inputGroup">
+    <label for="row">Row: </label>
+    <input maxlength="1" class="input" id="row" [(ngModel)]="triangle.row" placeholder="">
+</div>
+<div class ="inputGroup">
+    <label for="column">Column: </label>
+    <input class="input" id="column" [(ngModel)]="triangle.column" placeholder="">
+</div>
+<button (click)="GetTriangleLocation()">Get Location from Coordinates</button>
