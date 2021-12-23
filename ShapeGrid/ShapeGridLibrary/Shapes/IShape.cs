@@ -6,7 +6,7 @@
         public int GetWidth();
         public int GetNumberOfSides();
 
-        public string GetLocationFromCoordinates(int[][] vertexCoordinates);
+        public string[] GetLocationFromCoordinates(int[][] vertexCoordinates);
         public int[][] GetCoordinatesFromLocation(int row, int column);
     }
 }

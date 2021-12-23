@@ -10,7 +10,7 @@
             _shape = new Shape(shapeFactory);
         }
 
-        public string GetShapeLocation(int[][] coordinates)
+        public string[] GetShapeLocation(int[][] coordinates)
         {
             return _shape.GetLocationFromCoordinates(coordinates);
         }
@@ -24,7 +24,8 @@
         private int GetCharInt(string row)
         {
             char[] chars = row.ToUpper().ToCharArray();
-            return ((chars.Length - 1) * 26) + Convert.ToInt32(chars[^1] - 64);
+            
+            return chars[0] - 64;
         }
     }
 }

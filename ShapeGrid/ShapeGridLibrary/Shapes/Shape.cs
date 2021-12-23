@@ -15,7 +15,7 @@
 
         }
 
-        public string GetLocationFromCoordinates(int[][] vertexCoordinates)
+        public string[] GetLocationFromCoordinates(int[][] vertexCoordinates)
         {
             return _shape.GetLocationFromCoordinates(vertexCoordinates);
         }

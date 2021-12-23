@@ -55,7 +55,7 @@
             return coordinates;
         }
 
-        public string GetLocationFromCoordinates(int[][] vertexCoordinates)
+        public string[] GetLocationFromCoordinates(int[][] vertexCoordinates)
         {
             int[] vertex1 = vertexCoordinates[0];
             int[] vertex2 = vertexCoordinates[1];
@@ -78,9 +78,16 @@
             {
                 throw new InvalidDataException("Invalid vertex Coordinates for a triangle");
             }
-
-            char rowIdentifier = (char)(((row % 26) - 1) + 65);
-            return $"{rowIdentifier}{column}";
+            char rowIdentifier;
+            if (row.Equals(26))
+            {
+                rowIdentifier = (char)(26 - 1 + 65);
+            }
+            else
+            {
+                rowIdentifier = (char)(((row % 26) - 1) + 65);
+            }
+            return new string[] {rowIdentifier.ToString(), column.ToString() };
         }
 
         public int[] GetVertexValue(int row, int column, int vertex, bool invertedTriangle)
