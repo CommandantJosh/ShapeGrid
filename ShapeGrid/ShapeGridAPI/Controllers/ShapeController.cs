@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ShapeGridLibrary;
 
@@ -13,7 +14,6 @@ namespace ShapeGridAPI.Controllers
         {
             _logger = logger;
         }
-
         [HttpGet("{shapeName}/coordinates/{height}/{width}/{row}/{column}")]
         public IActionResult Get(string shapeName, int height, int width, string row, int column)
         {
@@ -58,8 +58,10 @@ namespace ShapeGridAPI.Controllers
 
             ShapeHandler shape = new ShapeHandler(shapeType, height, width);
 
+
             return Ok(new ShapeResponse() { Location = shape.GetShapeLocation(vertexCoordinates.ToArray()) });
 
+            
         }
     }
 }

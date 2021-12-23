@@ -4,6 +4,6 @@ namespace ShapeGridAPI
     {
         public int[][]? Coordinates { get; set; }
 
-        public string? Location { get; set; }
+        public string[]? Location { get; set; }
     }
 }
